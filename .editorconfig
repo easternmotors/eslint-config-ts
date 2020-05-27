@@ -1,0 +1,12 @@
+[*]
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties#current-universal-properties
+indent_style = space
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+root = true
+# https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties#max_line_length
+max_line_length = 100
