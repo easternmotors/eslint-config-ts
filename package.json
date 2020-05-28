@@ -1,7 +1,9 @@
 {
-  "name": "eslint-config-ts",
+  "name": "@easternmotors/eslint-config-ts",
+  "version": "1.1.0",
   "description": "Custom ESLint/Prettier/Stylelint config for Typescript users",
-  "version": "1.0.0",
+  "license": "MIT",
+  "author": "John Remsberg",
   "main": "index.js",
   "files": [
     "index.js",
@@ -13,26 +15,31 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "John Remsberg",
-  "license": "ISC",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.0.1",
-    "@typescript-eslint/parser": "^3.0.1",
-    "eslint": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "eslint": "^7.1.0",
     "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
     "eslint-plugin-cumul8": "^1.4.56",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prefer-arrow": "^1.2.1",
     "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
     "eslint-plugin-simple-import-sort": "^5.0.3",
     "prettier": "^2.0.5",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.5.0",
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-no-unused-selectors": "^1.0.28",
     "stylelint-order": "^4.0.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.1.0",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.5.0"
   }
 }
