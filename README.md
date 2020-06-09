@@ -1,5 +1,7 @@
 # @easternmotors/eslint-config-ts
 
+The goal of this repo is to provide a very explicit [full list](./index.js) of ESLint rules of what I think are the best practices/packages for users using React/Typescript. Feel free to extend this and turn on/off rules to your heart's content. It's also helpful to turn a few rules off when first adding this to your project and slowing enabling them when you have time. I also added Prettier and Stylelint so that users have the option to use all three if desired.
+
 ## Getting Started
 
 To get started, run:
