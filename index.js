@@ -73,7 +73,7 @@ module.exports = {
     'no-setter-return': 2,
     'no-sparse-arrays': 2,
     'no-template-curly-in-string': 2,
-    'no-unexpected-multiline': 0, // Off in favor of prettier/prettier
+    'no-unexpected-multiline': 2, // See https://github.com/prettier/eslint-config-prettier#special-rules
     'no-unreachable': 2,
     'no-unsafe-finally': 2,
     'no-unsafe-negation': 2,
@@ -88,7 +88,7 @@ module.exports = {
     'class-methods-use-this': 2,
     complexity: 2,
     'consistent-return': 2,
-    curly: 0, // Off in favor of prettier/prettier
+    curly: [2, 'all'], // See https://github.com/prettier/eslint-config-prettier#special-rules
     'default-case': 2,
     'default-case-last': 2,
     'default-param-last': 0, // Off in favor of @typescript-eslint/default-param-last
@@ -139,7 +139,7 @@ module.exports = {
     'no-script-url': 2,
     'no-self-assign': 2,
     'no-self-compare': 2,
-    'no-sequences': 2,
+    'no-sequences': 0, // See https://github.com/prettier/eslint-config-prettier#other-rules-worth-mentioning
     'no-throw-literal': 2,
     'no-unmodified-loop-condition': 2,
     'no-unused-expressions': 2,
@@ -208,7 +208,7 @@ module.exports = {
     'lines-around-comment': 0, // Off in favor of prettier/prettier
     'lines-between-class-members': 2,
     'max-depth': 2,
-    'max-len': 0, // Off in favor of prettier/prettier
+    'max-len': [2, { code: 100 }], // See https://github.com/prettier/eslint-config-prettier#special-rules
     'max-lines': 2,
     'max-lines-per-function': 2,
     'max-nested-callbacks': 2,
@@ -225,7 +225,7 @@ module.exports = {
     'no-continue': 2,
     'no-inline-comments': 2,
     'no-lonely-if': 2,
-    'no-mixed-operators': 0, // Off in favor of prettier/prettier
+    'no-mixed-operators': 2, // See https://github.com/prettier/eslint-config-prettier#special-rules
     'no-mixed-spaces-and-tabs': 0, // Off in favor of prettier/prettier
     'no-multi-assign': 2,
     'no-multiple-empty-lines': 0, // Off in favor of prettier/prettier
@@ -233,8 +233,8 @@ module.exports = {
     'no-nested-ternary': 2,
     'no-new-object': 2,
     'no-plusplus': 2,
-    'no-restricted-syntax': 2,
-    'no-tabs': 0, // Off in favor of prettier/prettier
+    'no-restricted-syntax': [2, 'SequenceExpression'], // See https://github.com/prettier/eslint-config-prettier#other-rules-worth-mentioning
+    'no-tabs': 2, // See https://github.com/prettier/eslint-config-prettier#special-rules
     'no-ternary': 0, // Allowing use of ternaries
     'no-trailing-spaces': 0, // Off in favor of prettier/prettier
     'no-underscore-dangle': 0, // Allow underscores for renaming/private use-cases
@@ -253,7 +253,7 @@ module.exports = {
     'prefer-exponentiation-operator': 2,
     'prefer-object-spread': 2,
     'quote-props': 0, // Off in favor of prettier/prettier
-    quotes: 0, // Off in favor of prettier/prettier
+    quotes: 0, // Off in favor of @typescript-eslint/quotes
     semi: 0, // Off in favor of prettier/prettier
     'semi-spacing': 0, // Off in favor of prettier/prettier
     'semi-style': 0, // Off in favor of prettier/prettier
@@ -270,13 +270,13 @@ module.exports = {
     'unicode-bom': 0, // Off in favor of prettier/prettier
     'wrap-regex': 0, // Off in favor of prettier/prettier
     // https://eslint.org/docs/rules/#ecmascript-6
-    'arrow-body-style': 0, // Off in favor of prettier/prettier
+    'arrow-body-style': [2, 'as-needed'], // See https://github.com/prettier/eslint-config-prettier#special-rules
     'arrow-parens': 0, // Off in favor of prettier/prettier
     'arrow-spacing': 0, // Off in favor of prettier/prettier
     'constructor-super': 2,
     'generator-star-spacing': 0, // Off in favor of prettier/prettier
     'no-class-assign': 2,
-    'no-confusing-arrow': 0, // Off in favor of prettier/prettier
+    'no-confusing-arrow': [2, { allowParens: false }], // See https://github.com/prettier/eslint-config-prettier#special-rules
     'no-const-assign': 2,
     'no-dupe-class-members': 2,
     'no-duplicate-imports': 2,
@@ -289,7 +289,7 @@ module.exports = {
     'no-useless-rename': 2,
     'no-var': 2,
     'object-shorthand': 2,
-    'prefer-arrow-callback': 0, // Off in favor of prettier/prettier
+    'prefer-arrow-callback': 2, // See https://github.com/prettier/eslint-config-prettier#special-rules
     'prefer-const': 2,
     'prefer-destructuring': 2,
     'prefer-numeric-literals': 2,
@@ -421,7 +421,14 @@ module.exports = {
     ],
     '@typescript-eslint/no-use-before-define': 2,
     '@typescript-eslint/no-useless-constructor': 2,
-    '@typescript-eslint/quotes': 0, // Off in favor of prettier/prettier
+    '@typescript-eslint/quotes': [
+      2,
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: false
+      }
+    ], // See https://github.com/prettier/eslint-config-prettier#special-rules
     '@typescript-eslint/require-await': 2,
     '@typescript-eslint/return-await': 2,
     '@typescript-eslint/semi': 0, // Off in favor of prettier/prettier
