@@ -225,7 +225,7 @@ module.exports = {
     'no-continue': 2,
     'no-inline-comments': 2,
     'no-lonely-if': 2,
-    'no-mixed-operators': 2, // See https://github.com/prettier/eslint-config-prettier#special-rules
+    'no-mixed-operators': 0, // Doesn't seem useful
     'no-mixed-spaces-and-tabs': 0, // Off in favor of prettier/prettier
     'no-multi-assign': 2,
     'no-multiple-empty-lines': 0, // Off in favor of prettier/prettier
@@ -276,7 +276,7 @@ module.exports = {
     'constructor-super': 2,
     'generator-star-spacing': 0, // Off in favor of prettier/prettier
     'no-class-assign': 2,
-    'no-confusing-arrow': [2, { allowParens: false }], // See https://github.com/prettier/eslint-config-prettier#special-rules
+    'no-confusing-arrow': 0, // Doesn't seem useful
     'no-const-assign': 2,
     'no-dupe-class-members': 2,
     'no-duplicate-imports': 2,
