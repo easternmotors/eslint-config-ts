@@ -66,8 +66,10 @@ module.exports = {
     'no-inner-declarations': 2,
     'no-invalid-regexp': 2,
     'no-irregular-whitespace': 2,
+    'no-loss-of-precision': 2, // Off in favor of @typescript-eslint/no-loss-of-precision
     'no-misleading-character-class': 2,
     'no-obj-calls': 2,
+    'no-promise-executor-return': 2,
     'no-prototype-builtins': 2,
     'no-regex-spaces': 2,
     'no-setter-return': 2,
@@ -75,6 +77,7 @@ module.exports = {
     'no-template-curly-in-string': 2,
     'no-unexpected-multiline': 2, // See https://github.com/prettier/eslint-config-prettier#special-rules
     'no-unreachable': 2,
+    'no-unreachable-loop': 2,
     'no-unsafe-finally': 2,
     'no-unsafe-negation': 2,
     'no-useless-backreference': 2,
@@ -206,7 +209,7 @@ module.exports = {
     'line-comment-position': 2,
     'linebreak-style': 0, // Off in favor of prettier/prettier
     'lines-around-comment': 0, // Off in favor of prettier/prettier
-    'lines-between-class-members': 2,
+    'lines-between-class-members': 0, // Off in favor of @typescript-eslint/lines-between-class-members
     'max-depth': 2,
     'max-len': [2, { code: 100 }], // See https://github.com/prettier/eslint-config-prettier#special-rules
     'max-lines': 2,
@@ -307,6 +310,7 @@ module.exports = {
     '@typescript-eslint/array-type': 2,
     '@typescript-eslint/await-thenable': 2,
     '@typescript-eslint/ban-ts-comment': 2,
+    '@typescript-eslint/ban-tslint-comment': 2,
     '@typescript-eslint/ban-types': 2,
     '@typescript-eslint/class-literal-property-style': 2,
     '@typescript-eslint/consistent-type-assertions': 2,
@@ -329,6 +333,7 @@ module.exports = {
       2,
       { ignoredTypeNames: ['RegExp', 'URLSearchParams'] }
     ],
+    '@typescript-eslint/no-confusing-non-null-assertion': 2,
     '@typescript-eslint/no-dynamic-delete': 2,
     '@typescript-eslint/no-empty-interface': 2,
     '@typescript-eslint/no-explicit-any': 2,
@@ -405,12 +410,14 @@ module.exports = {
     '@typescript-eslint/indent': 0, // Off in favor of prettier/prettier
     '@typescript-eslint/init-declarations': 0, // This could be useful
     '@typescript-eslint/keyword-spacing': 0, // Off in favor of prettier/prettier
+    '@typescript-eslint/lines-between-class-members': 2,
     '@typescript-eslint/no-array-constructor': 2,
     '@typescript-eslint/no-dupe-class-members': 2,
     '@typescript-eslint/no-empty-function': 2,
     '@typescript-eslint/no-extra-parens': 0, // Off in favor of prettier/prettier
     '@typescript-eslint/no-extra-semi': 0, // Off in favor of prettier/prettier
     '@typescript-eslint/no-invalid-this': 2,
+    '@typescript-eslint/no-loss-of-precision': 2,
     '@typescript-eslint/no-magic-numbers': 0, // Doesn't seem useful
     '@typescript-eslint/no-unused-expressions': 2,
     '@typescript-eslint/no-unused-vars': [
@@ -428,7 +435,7 @@ module.exports = {
         avoidEscape: true,
         allowTemplateLiterals: false
       }
-    ], // See https://github.com/prettier/eslint-config-prettier#special-rules
+    ],
     '@typescript-eslint/require-await': 2,
     '@typescript-eslint/return-await': 2,
     '@typescript-eslint/semi': 0, // Off in favor of prettier/prettier
@@ -623,6 +630,7 @@ module.exports = {
         reservedFirst: false
       }
     ],
+    // 'react/jsx-space-before-closing': 2, // Deprecated
     'react/jsx-tag-spacing': 0, // Off in favor of prettier/prettier
     'react/jsx-uses-react': 2,
     'react/jsx-uses-vars': 2,
