@@ -14,7 +14,8 @@ module.exports = {
     {
       files: ['*.js'],
       rules: {
-        '@typescript-eslint/explicit-function-return-type': 0
+        '@typescript-eslint/explicit-function-return-type': 0,
+        '@typescript-eslint/prefer-nullish-coalescing': 0
       }
     }
   ],
@@ -642,8 +643,19 @@ module.exports = {
     'simple-import-sort/sort': 2
   },
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
+    },
     'import/resolver': {
-      typescript: {}
+      typescript: {
+        // Check for tsconfig in root and in nested directories
+        directory: [
+          '../../../tsconfig.json',
+          '../../../**/tsconfig.json',
+          '../../../**/typescript.config.json'
+        ]
+      },
+      webpack: {}
     },
     react: {
       version: 'detect'
