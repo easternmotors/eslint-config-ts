@@ -211,7 +211,7 @@ module.exports = {
     'lines-around-comment': 0, // Off in favor of prettier/prettier
     'lines-between-class-members': 0, // Off in favor of @typescript-eslint/lines-between-class-members
     'max-depth': 2,
-    'max-len': [2, { code: 100 }], // See https://github.com/prettier/eslint-config-prettier#special-rules
+    'max-len': [2, { code: 120 }], // See https://github.com/prettier/eslint-config-prettier#special-rules
     'max-lines': 2,
     'max-lines-per-function': 2,
     'max-nested-callbacks': 2,
@@ -511,7 +511,7 @@ module.exports = {
     'prettier/prettier': [
       2,
       {
-        printWidth: 100,
+        printWidth: 120,
         singleQuote: true,
         trailingComma: 'none'
       }
