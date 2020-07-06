@@ -643,20 +643,6 @@ module.exports = {
     'simple-import-sort/sort': 2
   },
   settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx']
-    },
-    'import/resolver': {
-      typescript: {
-        // Check for tsconfig in root and in nested directories
-        directory: [
-          '../../../tsconfig.json',
-          '../../../**/tsconfig.json',
-          '../../../**/typescript.config.json'
-        ]
-      },
-      webpack: {}
-    },
     react: {
       version: 'detect'
     }
