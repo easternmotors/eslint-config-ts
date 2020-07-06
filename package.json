@@ -43,6 +43,8 @@
     "@typescript-eslint/eslint-plugin": "^3.5.0",
     "@typescript-eslint/parser": "^3.5.0",
     "eslint": "^7.4.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-import-resolver-webpack": "^0.12.2",
     "eslint-plugin-cumul8": "^1.4.56",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prefer-arrow": "^1.2.1",

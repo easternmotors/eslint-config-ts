@@ -330,10 +330,7 @@ module.exports = {
         prefix: ['I']
       }
     ],
-    '@typescript-eslint/no-base-to-string': [
-      2,
-      { ignoredTypeNames: ['RegExp', 'URLSearchParams'] }
-    ],
+    '@typescript-eslint/no-base-to-string': [2, { ignoredTypeNames: ['RegExp', 'URLSearchParams'] }],
     '@typescript-eslint/no-confusing-non-null-assertion': 2,
     '@typescript-eslint/no-dynamic-delete': 2,
     '@typescript-eslint/no-empty-interface': 2,
@@ -565,7 +562,7 @@ module.exports = {
     'react/prefer-stateless-function': 2,
     'react/prop-types': 2,
     'react/react-in-jsx-scope': 2,
-    'react/require-default-props': 2,
+    'react/require-default-props': [2, { ignoreFunctionalComponents: true }],
     'react/require-optimization': 2,
     'react/require-render-return': 2,
     'react/self-closing-comp': 2,
@@ -643,6 +640,19 @@ module.exports = {
     'simple-import-sort/sort': 2
   },
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx']
+    },
+    'import/resolver': {
+      webpack: {
+        config: {
+          resolve: {
+            extensions: ['.d.ts', '.js', '.ts', '.tsx']
+          }
+        }
+      },
+      typescript: {}
+    },
     react: {
       version: 'detect'
     }
