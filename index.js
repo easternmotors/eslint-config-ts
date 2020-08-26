@@ -199,7 +199,7 @@ module.exports = {
     'func-style': 2,
     'function-call-argument-newline': 0, // Off in favor of prettier/prettier
     'function-paren-newline': 0, // Off in favor of prettier/prettier
-    'id-blacklist': 2,
+    // 'id-blacklist': 2, // Deprecated
     'id-length': 0, // This doesn't seem useful
     'id-match': 2,
     'implicit-arrow-linebreak': 0, // Off in favor of prettier/prettier
@@ -339,6 +339,7 @@ module.exports = {
     '@typescript-eslint/no-extraneous-class': 2,
     '@typescript-eslint/no-floating-promises': 2,
     '@typescript-eslint/no-for-in-array': 2,
+    '@typescript-eslint/no-implicit-any-catch': 2,
     '@typescript-eslint/no-implied-eval': 2,
     '@typescript-eslint/no-inferrable-types': 2,
     '@typescript-eslint/no-invalid-void-type': 2,
@@ -364,9 +365,11 @@ module.exports = {
     '@typescript-eslint/no-unused-vars-experimental': 2,
     '@typescript-eslint/no-var-requires': 2,
     '@typescript-eslint/prefer-as-const': 2,
+    '@typescript-eslint/prefer-enum-initializers': 2,
     '@typescript-eslint/prefer-for-of': 0, // Turned off for performance reasons
     '@typescript-eslint/prefer-function-type': 2,
     '@typescript-eslint/prefer-includes': 2,
+    '@typescript-eslint/prefer-literal-enum-member': 2,
     '@typescript-eslint/prefer-namespace-keyword': 2,
     '@typescript-eslint/prefer-nullish-coalescing': 2,
     '@typescript-eslint/prefer-optional-chain': 2,
@@ -651,7 +654,9 @@ module.exports = {
           }
         }
       },
-      typescript: {}
+      typescript: {
+        alwaysTryTypes: true
+      }
     },
     react: {
       version: 'detect'
