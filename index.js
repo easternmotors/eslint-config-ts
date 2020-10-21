@@ -125,7 +125,7 @@ module.exports = {
     'no-iterator': 2,
     'no-labels': 2,
     'no-lone-blocks': 2,
-    'no-loop-func': 2,
+    'no-loop-func': 0, // Off in favor of @typescript-eslint/no-loop-func
     'no-magic-numbers': 0, // Off in favor of @typescript-eslint/no-magic-numbers
     'no-multi-spaces': 0, // Off in favor of prettier/prettier
     'no-multi-str': 2,
@@ -136,7 +136,7 @@ module.exports = {
     'no-octal-escape': 2,
     'no-param-reassign': 2,
     'no-proto': 2,
-    'no-redeclare': 2,
+    'no-redeclare': 0, // Off in favor of @typescript-eslint/no-redeclare
     'no-restricted-properties': 2,
     'no-return-assign': 2,
     'no-return-await': 0, // Off in favor of @typescript-eslint/return-await
@@ -172,7 +172,7 @@ module.exports = {
     'no-delete-var': 2,
     'no-label-var': 2,
     'no-restricted-globals': 2,
-    'no-shadow': 2,
+    'no-shadow': 0, // Off in favor of @typescript-eslint/no-shadow
     'no-shadow-restricted-names': 2,
     'no-undef': 2,
     'no-undef-init': 2,
@@ -199,7 +199,7 @@ module.exports = {
     'func-style': 2,
     'function-call-argument-newline': 0, // Off in favor of prettier/prettier
     'function-paren-newline': 0, // Off in favor of prettier/prettier
-    // 'id-blacklist': 2, // Deprecated
+    'id-denylist': ['error', 'data', 'err', 'e', 'cb', 'callback'], // See https://eslint.org/docs/rules/id-denylist#options
     'id-length': 0, // This doesn't seem useful
     'id-match': 2,
     'implicit-arrow-linebreak': 0, // Off in favor of prettier/prettier
@@ -283,7 +283,7 @@ module.exports = {
     'no-confusing-arrow': 0, // Doesn't seem useful
     'no-const-assign': 2,
     'no-dupe-class-members': 2,
-    'no-duplicate-imports': 2,
+    'no-duplicate-imports': 0, // Off in favor of @typescript-eslint/no-duplicate-imports
     'no-new-symbol': 2,
     'no-restricted-exports': 2,
     'no-restricted-imports': 2,
@@ -314,8 +314,10 @@ module.exports = {
     '@typescript-eslint/ban-tslint-comment': 2,
     '@typescript-eslint/ban-types': 2,
     '@typescript-eslint/class-literal-property-style': 2,
+    '@typescript-eslint/consistent-indexed-object-style': 2,
     '@typescript-eslint/consistent-type-assertions': 2,
     '@typescript-eslint/consistent-type-definitions': [2, 'interface'],
+    '@typescript-eslint/consistent-type-imports': 2,
     '@typescript-eslint/explicit-function-return-type': 2,
     '@typescript-eslint/explicit-member-accessibility': 2,
     '@typescript-eslint/explicit-module-boundary-types': 2,
@@ -362,7 +364,6 @@ module.exports = {
     '@typescript-eslint/no-unsafe-call': 2,
     '@typescript-eslint/no-unsafe-member-access': 2,
     '@typescript-eslint/no-unsafe-return': 2,
-    '@typescript-eslint/no-unused-vars-experimental': 2,
     '@typescript-eslint/no-var-requires': 2,
     '@typescript-eslint/prefer-as-const': 2,
     '@typescript-eslint/prefer-enum-initializers': 2,
@@ -404,6 +405,7 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 2,
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
     '@typescript-eslint/brace-style': 0, // Off in favor of prettier/prettier
+    '@typescript-eslint/comma-dangle': 0, // Off in favor of prettier/prettier
     '@typescript-eslint/comma-spacing': 0, // Off in favor of prettier/prettier
     '@typescript-eslint/default-param-last': 2,
     '@typescript-eslint/dot-notation': 2,
@@ -414,12 +416,16 @@ module.exports = {
     '@typescript-eslint/lines-between-class-members': 2,
     '@typescript-eslint/no-array-constructor': 2,
     '@typescript-eslint/no-dupe-class-members': 2,
+    '@typescript-eslint/no-duplicate-imports': 2,
     '@typescript-eslint/no-empty-function': 2,
     '@typescript-eslint/no-extra-parens': 0, // Off in favor of prettier/prettier
     '@typescript-eslint/no-extra-semi': 0, // Off in favor of prettier/prettier
     '@typescript-eslint/no-invalid-this': 2,
+    '@typescript-eslint/no-loop-func': 2,
     '@typescript-eslint/no-loss-of-precision': 2,
     '@typescript-eslint/no-magic-numbers': 0, // Doesn't seem useful
+    '@typescript-eslint/no-redeclare': 2,
+    '@typescript-eslint/no-shadow': 2,
     '@typescript-eslint/no-unused-expressions': 2,
     '@typescript-eslint/no-unused-vars': [
       2,
