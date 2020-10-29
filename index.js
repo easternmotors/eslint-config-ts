@@ -4,6 +4,9 @@ module.exports = {
     es2020: true,
     node: true
   },
+  globals: {
+    JSX: 'readonly'
+  },
   overrides: [
     {
       files: ['**/*.module.css.d.ts'],
@@ -28,6 +31,7 @@ module.exports = {
       modules: true
     },
     ecmaVersion: 2020,
+    project: '../../../tsconfig.json',
     sourceType: 'module'
   },
   plugins: [
@@ -178,7 +182,7 @@ module.exports = {
     'no-undef-init': 2,
     'no-undefined': 2,
     'no-unused-vars': 0, // Off in favor of @typescript-eslint/no-unused-vars
-    'no-use-before-define': 2,
+    'no-use-before-define': 0, // Off in favor of @typescript-eslint/no-use-before-define
     // https://eslint.org/docs/rules/#stylistic-issues
     'array-bracket-newline': 0, // Off in favor of prettier/prettier
     'array-bracket-spacing': 0, // Off in favor of prettier/prettier
@@ -649,11 +653,8 @@ module.exports = {
     'simple-import-sort/sort': 2
   },
   settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx']
-    },
-    react: {
-      version: 'detect'
-    }
+    'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx'] },
+    'import/resolver': { 'node': { 'extensions': ['.d.ts', '.js', '.ts', '.tsx'] } },
+    react: { version: 'detect' }
   }
 };
