@@ -1,6 +1,6 @@
 {
   "name": "@easternmotors/eslint-config-ts",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Custom ESLint/Prettier/Stylelint config for Typescript users",
   "keywords": [
     "check",
