@@ -652,18 +652,6 @@ module.exports = {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx']
     },
-    'import/resolver': {
-      webpack: {
-        config: {
-          resolve: {
-            extensions: ['.d.ts', '.js', '.ts', '.tsx']
-          }
-        }
-      },
-      typescript: {
-        alwaysTryTypes: true
-      }
-    },
     react: {
       version: 'detect'
     }
